@@ -265,24 +265,12 @@ function App() {
           drawerContent={(props) => <CustomDrawerContent {...props} />}
         >
           <Drawer.Screen name="Home" component={MyBanner} />
-
           <Drawer.Screen name="Información" >
             {props => <Home userToken={userToken} setUserToken={setUserToken} />}
           </Drawer.Screen>
           <Drawer.Screen name="Contactos y Ubicación" component={Contacto} /> 
-
-          <Drawer.Screen name="Enfermedades" component={Enfermedades} visible={false} />
-
-
-
-
-
-          
+          <Drawer.Screen name="Enfermedades" component={Enfermedades}  />
           <Drawer.Screen name="Descripcion" component={Descripcion} />
-
-
-
-
         </Drawer.Navigator>
       </NavigationContainer>
     );

@@ -45,27 +45,7 @@ class Tarjetas extends React.Component {
             </Text>
             <Image source={require('../assets/hospital.jpg')}></Image>
           </View>
-          {/*<View style={{
-            width: "90%", borderWidth: 0, borderRadius: 15, padding: 30, justifyContent: "center", alignContent: "center", alignItems: "center", shadowColor: "#000",
-            shadowOffset: {
-              width: 0,
-              height: 1,
-            },
-            shadowOpacity: 0.22,
-            shadowRadius: 2.22,
 
-            elevation: 3,
-          }}>
-            <Text style={{ fontSize: 25 }}>Informacion General</Text>
-            <Text style={{ fontSize: 25 }}></Text>
-            <Text>
-              En CLINICA HOSPITAL SAN ANTONIO, nos dedicamos a brindarles a nuestros clientes un servicio cordial. Valoramos su negocio. Nuestra misión es ofrecer productos y servicios confiables con un enfoque orientado al cliente.
-            </Text>
-            <Text>
-              Nuestro equipo atento y profesional puede brindar una variedad de servicios para satisfacer sus requisitos.
-            </Text>
-            <Image source={require('../assets/hospital.jpg')}></Image>
-        </View>*/}
         </View>
       </ScrollView>
     )

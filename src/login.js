@@ -55,64 +55,64 @@ const Login = ({ setUserToken }) => {
     //  return response
   }
   return (
-    <SafeAreaView style={{ flex: 1, justifyContent: "center", alignContent: "center", alignItems: "center" 
-    
+    <SafeAreaView style={{
+      flex: 1, justifyContent: "center", alignContent: "center", alignItems: "center"
+
     }}>
-      <View style={{width:"95%",
-    borderWidth:5,
-    borderRadius:20,
-    alignItems:"center",
-    borderColor:"#B1AFAF"
-    }}>
-      <Image source={require('../assets/hospital.jpg')} style={{margin:15,width:"50%"}}></Image>
+      <View style={{
+        width: "95%",
+        borderWidth: 5,
+        borderRadius: 20,
+        alignItems: "center",
+        borderColor: "#B1AFAF"
+      }}>
+        <Image source={require('../assets/hospital.jpg')} style={{ margin: 15, width: "50%" }}></Image>
 
-      <View style={{ flexDirection: "row",margin:10, justifyContent: "center", alignContent: "center", alignItems: "center" }}>
-        
-        <Text style={[styles.contraseaText, { width: "20%" }]}>Usuario</Text>
-        <TextInput placeholder="Usuario"
-          style={{ borderWidth: 1, width: "60%",padding:5 }}
-          placeholderTextColor={"#097679"}
-          fontSize={20}
-          secureTextEntry={false}
-          returnKeyType="done"
-          value={user}
-          onChangeText={setUser}
-          keyboardType='number-pad'
-          autoCapitalize='none' />
-      </View>
-      <View style={{ flexDirection: "row",margin:10, justifyContent: "center", alignContent: "center", alignItems: "center" }}>
-        <Text style={[styles.contraseaText, { width: "20%" }]}>password</Text>
-        <TextInput placeholder="Password"
-          style={{ borderWidth: 1, width: "60%",padding:5 }}
-          placeholderTextColor={"#097679"}
-          fontSize={20}
-          secureTextEntry={false}
-          returnKeyType="done"
-          value={password}
-          onChangeText={setPassword}
-          keyboardType='number-pad'
-          autoCapitalize='none' />
-      </View>
-      <View style={{ flexDirection: "row",margin:10, justifyContent: "center", alignContent: "center", alignItems: "center" }}>
+        <View style={{ flexDirection: "row", margin: 10, justifyContent: "center", alignContent: "center", alignItems: "center" }}>
 
-        <Text style={[styles.contraseaText, { width: "20%" }]}>numero</Text>
-        <TextInput placeholder="Numero"
-          style={{ borderWidth: 1, width: "60%",padding:5 }}
-          placeholderTextColor={"#097679"}
-          fontSize={20}
-          secureTextEntry={false}
-          returnKeyType="done"
-          value={numero}
-          onChangeText={setNumero}
-          keyboardType='number-pad'
-          autoCapitalize='none' />
-      </View>
+          <Text style={[styles.contraseaText, { width: "20%" }]}>Usuario</Text>
+          <TextInput placeholder="Usuario"
+            style={{ borderWidth: 1, width: "60%", padding: 5 }}
+            placeholderTextColor={"#097679"}
+            fontSize={20}
+            secureTextEntry={false}
+            returnKeyType="done"
+            value={user}
+            onChangeText={setUser}
+            autoCapitalize='none' />
+        </View>
+        <View style={{ flexDirection: "row", margin: 10, justifyContent: "center", alignContent: "center", alignItems: "center" }}>
+          <Text style={[styles.contraseaText, { width: "20%" }]}>password</Text>
+          <TextInput placeholder="Password"
+            style={{ borderWidth: 1, width: "60%", padding: 5 }}
+            placeholderTextColor={"#097679"}
+            fontSize={20}
+            secureTextEntry={false}
+            returnKeyType="done"
+            value={password}
+            onChangeText={setPassword}
+            autoCapitalize='none' />
+        </View>
+        <View style={{ flexDirection: "row", margin: 10, justifyContent: "center", alignContent: "center", alignItems: "center" }}>
 
-      <TouchableOpacity style={styles.lOGINPressable}
-        onPress={confirmCode}
-      >
-        <Text style={styles.entrarText}>Entrar</Text>
-      </TouchableOpacity>
+          <Text style={[styles.contraseaText, { width: "20%" }]}>numero</Text>
+          <TextInput placeholder="Numero"
+            style={{ borderWidth: 1, width: "60%", padding: 5 }}
+            placeholderTextColor={"#097679"}
+            fontSize={20}
+            secureTextEntry={false}
+            returnKeyType="done"
+            value={numero}
+            onChangeText={setNumero}
+            keyboardType='number-pad'
+            autoCapitalize='none' />
+        </View>
+
+        <TouchableOpacity style={styles.lOGINPressable}
+          onPress={confirmCode}
+        >
+          <Text style={styles.entrarText}>Entrar</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
 
@@ -126,8 +126,8 @@ const styles = StyleSheet.create({
     width: '100%',
     alignSelf: 'center',
     justifyContent: 'center',
-    marginBottom:20,
-    marginTop:20,
+    marginBottom: 20,
+    marginTop: 20,
   },
   entrarText: {
     fontSize: 17,
