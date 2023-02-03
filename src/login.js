@@ -1,11 +1,10 @@
 import * as React from "react";
-//import { AuthContext,AuthProvider } from "../context/AuthContext";
 import axios from 'axios';
 
 
 import { Image, StyleSheet, View, Text, TextInput, TouchableOpacity, Alert, Dimensions, ScrollView, SafeAreaView, StatusBar } from "react-native";
 const Login = ({ setUserToken }) => {
-  // const { userToken } = React.useContext(AuthContext);
+
   //const {userToken, setUserToken } = this.props
 
   const [user, setUser] = React.useState('margarita.desiteg');
@@ -70,7 +69,7 @@ const Login = ({ setUserToken }) => {
 
         <View style={{ flexDirection: "row", margin: 10, justifyContent: "center", alignContent: "center", alignItems: "center" }}>
 
-          <Text style={[styles.contraseaText, { width: "20%" }]}>Usuario</Text>
+          <Text style={[ { width: "20%" }]}>Usuario</Text>
           <TextInput placeholder="Usuario"
             style={{ borderWidth: 1, width: "60%", padding: 5 }}
             placeholderTextColor={"#097679"}
@@ -82,7 +81,7 @@ const Login = ({ setUserToken }) => {
             autoCapitalize='none' />
         </View>
         <View style={{ flexDirection: "row", margin: 10, justifyContent: "center", alignContent: "center", alignItems: "center" }}>
-          <Text style={[styles.contraseaText, { width: "20%" }]}>password</Text>
+          <Text style={[ { width: "20%" }]}>password</Text>
           <TextInput placeholder="Password"
             style={{ borderWidth: 1, width: "60%", padding: 5 }}
             placeholderTextColor={"#097679"}
@@ -95,7 +94,7 @@ const Login = ({ setUserToken }) => {
         </View>
         <View style={{ flexDirection: "row", margin: 10, justifyContent: "center", alignContent: "center", alignItems: "center" }}>
 
-          <Text style={[styles.contraseaText, { width: "20%" }]}>numero</Text>
+          <Text style={[ { width: "20%" }]}>numero</Text>
           <TextInput placeholder="Numero"
             style={{ borderWidth: 1, width: "60%", padding: 5 }}
             placeholderTextColor={"#097679"}

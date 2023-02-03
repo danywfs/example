@@ -14,11 +14,6 @@ class Tarjetas extends React.Component {
     //validacion del estado en el que se encuentre el contrato
 
 
-    //formato de numero a moneda
-    function currencyFormat(num) {
-      return '$ ' + (num * 1).toFixed(2).toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
-    }
-
     //estilo de las tarjetas de los contratos
     return (
 

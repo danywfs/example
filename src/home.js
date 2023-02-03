@@ -1,12 +1,10 @@
 import * as React from "react";
-import { AuthContext,AuthProvider } from "../context/AuthContext";
 
 import { Image, StyleSheet, View, Text, TextInput, TouchableOpacity, Alert, Dimensions, ScrollView, SafeAreaView, StatusBar } from "react-native";
 import Tarjetas from "../const/Tarjetas";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 const Home = ({ userToken,setUserToken }) => {
- // const { userToken } = React.useContext(AuthContext);
  const [user, setUser] = React.useState('');
  const [password, setPassword] = React.useState('');
  const [numero, setNumero] = React.useState('');
@@ -41,13 +39,7 @@ const Home = ({ userToken,setUserToken }) => {
 
   );
 }
-/**
- * <TouchableOpacity style={styles.lOGINPressable}
-                    onPress={confirmCode}
-                >
-                <Text style={styles.entrarText}>cerrar sesion</Text>
-          </TouchableOpacity>    
- */
+
 const styles = StyleSheet.create({
     lOGINPressable: {
         position: 'absolute',

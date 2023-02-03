@@ -17,7 +17,6 @@ import {
 import MapView from 'react-native-maps';
 
 import { StatusBar } from 'expo-status-bar';
-import { AuthContext, AuthProvider } from './context/AuthContext';
 function Informacion({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -68,8 +67,8 @@ function Contacto({ navigation }) {
 function Enfermedades({ navigation }) {
   const tableData = [
     ["Bronquitis aguda ", 'La bronquitis aguda, a veces también llamada resfriado de pecho, ocurre cuando las vías respiratorias en el pulmón se inflaman y producen mucosidad en los pulmones', <Pressable onPress={() => navigation.navigate('Descripcion', {
-      itemId: "Bronquitis aguda\n"+
-      "Causas:\n" +
+      itemId: "Bronquitis aguda\n" +
+        "Causas:\n" +
         "Lo que generalmente causa la bronquitis aguda es un virus." +
         "A veces, también la puede ser causada por bacterias." +
         "Pero incluso en esos casos, los antibióticos NO están" +
@@ -85,8 +84,8 @@ function Enfermedades({ navigation }) {
       <Text>Ver Mas</Text>
     </Pressable>],
     ["Resfriado común", '¿Tiene estornudos, congestión nasal y moqueo? Podría ser un resfriado. Los resfriados son una de las razones más frecuentes de ausencias escolares y laborales', <Pressable onPress={() => navigation.navigate('Descripcion', {
-      itemId: "Resfriado común\n"+
-      "Causas\n" +
+      itemId: "Resfriado común\n" +
+        "Causas\n" +
         "Más de 200 virus pueden causar un resfriado," +
         "pero los rinovirus son el tipo más común." +
         "Los virus que causan los resfriados se pueden" +
@@ -100,62 +99,62 @@ function Enfermedades({ navigation }) {
         "Tos" +
         "Goteo de mucosidad en la garganta (goteo posnasal) Lagrimeo" +
         "Fiebre (si bien la mayoría de las personas resfriadas no tienen fiebre)"
-      })} style={styles.lOGINPressable}>
+    })} style={styles.lOGINPressable}>
       <Text>Ver Mas</Text>
     </Pressable>],
     ["Infección de oído", 'Existen distintos tipos de infecciones de oído. La infección del oído medio (otitis media aguda) es una infección en el oído medio.', <Pressable onPress={() => navigation.navigate('Descripcion', {
-      itemId: "Infección de oído\n"+
-      "Causas\n" +
-        "Las bacterias, como Streptococcus pneumoniae y Haemophilus influenzae (no tipificable) son las dos bacterias más comunes que causan infecciones del oído medio."+
-        "Los virus, como los que causan los resfriados pueden causar infecciones del oído medio.\n\n\n"+
-        "Síntomas\n"+
-        "Dolor de oído"+
-        "Fiebre"+
-        "Nerviosismo o irritabilidad"+
-        "Frotarse o jalarse una oreja"+
+      itemId: "Infección de oído\n" +
+        "Causas\n" +
+        "Las bacterias, como Streptococcus pneumoniae y Haemophilus influenzae (no tipificable) son las dos bacterias más comunes que causan infecciones del oído medio." +
+        "Los virus, como los que causan los resfriados pueden causar infecciones del oído medio.\n\n\n" +
+        "Síntomas\n" +
+        "Dolor de oído" +
+        "Fiebre" +
+        "Nerviosismo o irritabilidad" +
+        "Frotarse o jalarse una oreja" +
         "Dificultad para dormir"
-      })} style={styles.lOGINPressable}>
+    })} style={styles.lOGINPressable}>
       <Text>Ver Mas</Text>
     </Pressable>],
     ["Influenza (gripe)", 'La influenza es una enfermedad respiratoria que se propaga de persona a persona. Puede causar enfermedad moderada a grave. Las consecuencias graves de la influenza pueden llevar a la hospitalización o la muerte.', <Pressable onPress={() => navigation.navigate('Descripcion', {
-      itemId: "Influenza (gripe) \n"+
-      "Causas\n" +
+      itemId: "Influenza (gripe) \n" +
+        "Causas\n" +
         "La influenza es causada por un virus que se propaga de persona a persona. Cada año provoca epidemias estacionales.\n\n\n" +
         "Síntomas\n" +
-        "fiebre (no todas las personas con influenza tienen fiebre)"+
-        "tos"+
-        "dolores corporales"+
-        "dolor de garganta"+
-       "moqueo o congestión nasal"+
-        "dolor de cabeza"+
-        "escalofríos"+
-        "fatiga"+
+        "fiebre (no todas las personas con influenza tienen fiebre)" +
+        "tos" +
+        "dolores corporales" +
+        "dolor de garganta" +
+        "moqueo o congestión nasal" +
+        "dolor de cabeza" +
+        "escalofríos" +
+        "fatiga" +
         "algunas veces, vómitos y diarrhea"
-      })} style={styles.lOGINPressable}>
+    })} style={styles.lOGINPressable}>
       <Text>Ver Mas</Text>
     </Pressable>],
   ]
   const tableHead = ['nombre', 'descripción,', '']
   return (
-    <View style={{ flex: 1, height:500,alignItems: 'center', justifyContent: 'center' }}>
+    <View style={{ flex: 1, height: 500, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Algunas enfermedades</Text>
-      <ScrollView style={{width:wp("90%")}}>
-      <Table borderStyle={{ borderWidth: 2, borderColor: '#c8e1ff' }} style={{ width: "100%" }} >
-        <Row data={tableHead} style={styles.head} textStyle={styles.text} />
-        <Rows data={tableData} textStyle={styles.text} />
-      </Table>
+      <ScrollView style={{ width: wp("90%") }}>
+        <Table borderStyle={{ borderWidth: 2, borderColor: '#c8e1ff' }} style={{ width: "100%" }} >
+          <Row data={tableHead} />
+          <Rows data={tableData} />
+        </Table>
       </ScrollView>
     </View>
   );
 }
 function Descripcion({ navigation, route }) {
-  const { itemId, otherParam } = route.params;
+  const { itemId } = route.params;
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text style={{ fontSize: 20 }}>{itemId}</Text>
       <Pressable
-        onPress={() => navigation.goBack() }
+        onPress={() => navigation.goBack()}
         style={{ padding: 10, marginBottom: 10, marginTop: 10 }}
       >
         <Text>regresar</Text>
@@ -164,7 +163,6 @@ function Descripcion({ navigation, route }) {
         onPress={() => navigation.openDrawer()}
         style={{ padding: 10, marginBottom: 10, marginTop: 10 }}
       >
-        <Text>Open Drawer</Text>
       </Pressable>
     </View>
   );
@@ -268,9 +266,11 @@ function App() {
           <Drawer.Screen name="Información" >
             {props => <Home userToken={userToken} setUserToken={setUserToken} />}
           </Drawer.Screen>
-          <Drawer.Screen name="Contactos y Ubicación" component={Contacto} /> 
-          <Drawer.Screen name="Enfermedades" component={Enfermedades}  />
-          <Drawer.Screen name="Descripcion" component={Descripcion} />
+          <Drawer.Screen name="Contactos y Ubicación" component={Contacto} />
+          <Drawer.Screen name="Enfermedades" component={Enfermedades} />
+          <Drawer.Screen name="Descripcion" component={Descripcion} options={{
+            drawerItemStyle: { height: 0 }
+          }} />
         </Drawer.Navigator>
       </NavigationContainer>
     );
@@ -301,8 +301,8 @@ const styles = StyleSheet.create({
     width: '90%',
     alignSelf: 'center',
     justifyContent: 'center',
-    fontSize:18,
-    color:"#FFF"
+    fontSize: 18,
+    color: "#FFF"
   },
   entrarText: {
     fontSize: 17,
